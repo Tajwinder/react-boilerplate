@@ -1,7 +1,11 @@
-import React from 'https://esm.sh/react@18';
-import ReactDOM from 'https://esm.sh/react-dom@18';
+import { createRoot } from 'react-dom/client';
+import React from 'react';
+import { Welcome } from './Welcome';
 
-ReactDOM.render(
-  React.createElement('h1', null, 'My React Project with ES6 Modules'),
-  document.getElementById('root')
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <>
+    <h1>My React Project with ES6 Modules</h1>
+    <Welcome />{' '}
+  </>
 );
